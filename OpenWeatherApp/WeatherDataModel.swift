@@ -1,5 +1,5 @@
 //
-//  CityDataModel.swift
+//  WeatherDataModel.swift
 //  OpenWeatherApp
 //
 //  Created by Viktor Tapovski on 24.2.16.
@@ -9,20 +9,20 @@
 import Foundation
 import UIKit
 
-class CityDataModel {
+class WeatherDataModel {
     var name: String = ""
-    var temp: Double = 0.0
+    var temp: Int = 0
     //var humidity: Int = 0
     //var description: String = ""
     
     
-    init?(name: String, temp: Double) {
+    init?(name: String, temp: Int) {
         // Initialize
         self.name = name
         self.temp = temp
         
         
-        if name.isEmpty || temp < 0 {
+        if name.isEmpty {
             return nil
         }
     }
